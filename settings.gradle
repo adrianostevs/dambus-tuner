@@ -1,0 +1,2 @@
+rootProject.name='DaTun'
+include ':app'

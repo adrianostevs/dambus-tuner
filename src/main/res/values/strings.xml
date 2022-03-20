@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DaTun</string>
+    <string name="nilai_kunci">Nilai Kunci</string>
+    <string name="sd">=</string>
+    <string name="nilai_frekuensi">Frekuensi</string>
+    <string name="senar_1">Senar 1 (Paling Atas)</string>
+    <string name="senar_2">Senar 2</string>
+    <string name="senar_3">Senar 3</string>
+    <string name="senar_4">Senar 4 (Paling Bawah)</string>
+    <string name="palingatas">(Paling Atas)</string>
+    <string name="palingbawah">(Paling Bawah</string>
+    <string name="c0">C0</string>
+    <string name="d0">D0</string>
+    <string name="e0">E0</string>
+    <string name="dambus_tuner">DAMBUS TUNER</string>
+</resources>

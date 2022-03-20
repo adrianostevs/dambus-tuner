@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/latarblkg"
+        android:src="@drawable/latar"
+        android:layout_width="1000dp"
+        android:layout_height="1000dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/putih"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/dial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"/>
+
+    <com.example.datun.graphics.DialView
+        android:id="@+id/dial"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/datun"
+        android:textColor="#FFFFFF"
+        android:text="@string/dambus_tuner"
+        android:fontFamily="@font/roboto_black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/dambus"
+        android:src="@drawable/damb"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/kunci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text="@string/nilai_kunci"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toStartOf="@id/sd"
+        app:layout_constraintBottom_toTopOf="@id/dial"/>
+
+    <TextView
+        android:id="@+id/sd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sd"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@id/dial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nilai_frekuensi"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@id/dial"
+        app:layout_constraintStart_toEndOf="@id/sd"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/roboto_boldcondensed"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/senar_1"
+            android:tag="146.83"/>
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_boldcondensed"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/senar_2"
+            android:tag="195.99"/>
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_boldcondensed"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/senar_3"
+            android:tag="261.62"/>
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:fontFamily="@font/roboto_boldcondensed"
+            android:text="@string/senar_4"
+            android:tag="349.22"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/dbunyi"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_marginBottom="40px"
+        app:layout_constraintBottom_toTopOf="@id/gbunyi"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="100px"
+        android:background="@drawable/d_tombol"/>
+
+    <Button
+        android:id="@+id/gbunyi"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_marginBottom="40px"
+        app:layout_constraintBottom_toTopOf="@id/cbunyi"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="100px"
+        android:background="@drawable/g_tombol"/>
+
+    <Button
+        android:id="@+id/cbunyi"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_marginBottom="40px"
+        app:layout_constraintBottom_toTopOf="@id/fbunyi"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="100px"
+        android:background="@drawable/c_tombol"/>
+
+    <Button
+        android:id="@+id/fbunyi"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_marginBottom="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="100px"
+        android:background="@drawable/f_tombol"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
